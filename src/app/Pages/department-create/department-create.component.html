@@ -1,0 +1,28 @@
+<div>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h4>Department Create
+                    <a routerLink="/" class="btn btn-danger float-end">Back</a>
+                </h4>
+            </div>
+            <div class="card-body">
+                <form (ngSubmit)="saveDepartment()">
+                    <div class="mb-3">
+                        <label>Department Name</label>
+                        <input type="text" [(ngModel)]="dname" name="dname" class="form-control"/>
+                        <span *ngIf="errors.Dname" class="text-danger">{{errors.Dname}}</span>
+                    </div>
+                    <div class="mb-3">
+                        <label>Location</label>
+                        <input type="text" [(ngModel)]="location" name="location" class="form-control"/>
+                        <span *ngIf="errors.Location" class="text-danger">{{errors.Location}}</span>
+                    </div>
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

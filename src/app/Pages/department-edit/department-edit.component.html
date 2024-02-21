@@ -1,0 +1,30 @@
+<div>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h4>Department Edit
+                    <a routerLink="/" class="btn btn-danger float-end">Back</a>
+                </h4>
+            </div>
+            <div class="card-body">
+                <form (ngSubmit)="updateDepartment()">
+                    <div *ngIf="department">
+                        <div class="mb-3">
+                            <label>Department Name</label>
+                            <input type="text" [(ngModel)]="department.dname" name="dname" class="form-control"/>
+                            <span *ngIf="errors.Dname" class="text-danger">{{errors.Dname}}</span>
+                        </div>
+                        <div class="mb-3">
+                            <label>Location</label>
+                            <input type="text" [(ngModel)]="department.location" name="location" class="form-control"/>
+                            <span *ngIf="errors.Location" class="text-danger">{{errors.Location}}</span>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-primary">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
