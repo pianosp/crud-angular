@@ -23,6 +23,7 @@ export class DepartmentEditComponent{
       console.log(res)
       this.department = res.department
     });
+    
 
   }
   updateDepartment(){
